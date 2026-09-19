@@ -1,6 +1,7 @@
 {
   "type": "module",
   "scripts": {
+    "preview": "cd ./preview && pnpm dev",
     "extract": "node runs/extract.ts",
     "cleanup": "node runs/clean.ts",
     "update": "node runs/update.ts",
@@ -13,13 +14,13 @@
     "node": ">=23.7.0"
   },
   "devDependencies": {
-    "@types/archiver": "^6.0.3",
-    "@types/node": "^22.14.0",
+    "@types/archiver": "^6.0.4",
+    "@types/node": "^22.20.3",
     "@types/unzipper": "^0.10.11",
     "archiver": "^8.0.0",
     "consola": "^3.4.2",
-    "sharp": "^0.34.0",
-    "typescript": "^5.8.3",
-    "unzipper": "^0.12.3"
+    "sharp": "^0.34.5",
+    "typescript": "^5.9.3",
+    "unzipper": "^0.12.5"
   }
 }

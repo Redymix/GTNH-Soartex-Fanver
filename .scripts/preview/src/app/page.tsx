@@ -164,6 +164,9 @@ export default function Home() {
               <Text w="100%" ta="center">
                 {filepath.split('/').pop()?.replace('.png', '')}
               </Text>
+              <Text w="100%" ta="center">
+                {filepath.split('assets')[1].slice(1).split('/')[0]}
+              </Text>
             </Stack>
           </Card>
         ))}

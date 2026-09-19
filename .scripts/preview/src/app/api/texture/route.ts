@@ -2,7 +2,8 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 export async function GET(req: Request) {
-  const configPath = join(process.cwd(), '..', 'config.json');
+  const configDir = join(process.cwd(), '..');
+  const configPath = join(configDir, 'config.json');
   const config = JSON.parse(readFileSync(configPath, "utf-8"));
 
 	try {
@@ -17,9 +18,11 @@ export async function GET(req: Request) {
       });
     }
 
-    const texturePath = resolution === "x16" 
+    const relativeTexturePath = resolution === "x16" 
       ? config.directories.default.replace("$root", config.directories.$root) + filepath.replace("assets", "")
       : config.directories.faithful.replace("$root", config.directories.$root) + filepath.replace("assets", "");
+
+    const texturePath = join(configDir, relativeTexturePath);
 
     if (!existsSync(texturePath)) {
       return new Response(JSON.stringify({ error: "Texture not found" }), {
