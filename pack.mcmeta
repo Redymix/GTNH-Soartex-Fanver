@@ -1,17 +1,17 @@
 {
   "pack": {
     "pack_format": 1,
-    "description": "§6GT New Horizons §bSoartex Fanver x64 §6By Redymix §bv2.9 §r(26% done)"
+    "description": "§6GT New Horizons §bSoartex Fanver x64 §6By Redymix §bv2.9.0 §r(26% done)"
   },
   "gtnh_resource_pack_updater": {
     "schema": 1,
-    "pack_name": "Soartex Fanver x64",
-    "pack_version": "2.9",
-    "pack_game_version": "2.9",
+    "pack_name": "GTNH Soartex Fanver x64",
+    "pack_version": "2.9.0",
+    "pack_game_version": "2.9.0",
     "source": {
       "type": "github_releases",
       "owner": "Redymix",
-      "repo": "GTNH-Faithful-Textures"
+      "repo": "GTNH-Soartex-Fanver"
     }
   }
 }
